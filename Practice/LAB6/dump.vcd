@@ -1,0 +1,177 @@
+$date
+	Sat Apr 29 12:33:58 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module test_tb $end
+$var wire 3 ! Z [2:0] $end
+$var reg 3 " A [2:0] $end
+$var reg 3 # B [2:0] $end
+$var reg 3 $ Zexpected [2:0] $end
+$var reg 1 % clk $end
+$var reg 32 & errors [31:0] $end
+$var reg 2 ' op [1:0] $end
+$var reg 1 ( rst $end
+$var reg 32 ) vectornum [31:0] $end
+$scope module test $end
+$var wire 3 * A [2:0] $end
+$var wire 3 + B [2:0] $end
+$var wire 1 % clk $end
+$var wire 2 , op [1:0] $end
+$var wire 1 ( rst $end
+$var reg 3 - Z [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx -
+bx ,
+bx +
+bx *
+b0 )
+1(
+bx '
+b0 &
+0%
+bx $
+bx #
+bx "
+bx !
+$end
+#10
+b1 !
+b1 -
+b10 '
+b10 ,
+b111 "
+b111 *
+b1 #
+b1 +
+b1 $
+1%
+#20
+b1 )
+0%
+#30
+b10 !
+b10 -
+b1 '
+b1 ,
+b11 "
+b11 *
+b10 $
+1%
+#40
+b10 )
+0%
+#50
+b0 !
+b0 -
+b10 '
+b10 ,
+b100 "
+b100 *
+b11 #
+b11 +
+b0 $
+1%
+#60
+b11 )
+0%
+#70
+b101 !
+b101 -
+b111 "
+b111 *
+b101 #
+b101 +
+b101 $
+1%
+#80
+b100 )
+0%
+#90
+b0 !
+b0 -
+b10 "
+b10 *
+b0 #
+b0 +
+b0 $
+1%
+#100
+b101 )
+0%
+#110
+b1 !
+b1 -
+b1 "
+b1 *
+b111 #
+b111 +
+b1 $
+1%
+#120
+b110 )
+0%
+#130
+b11 !
+b11 -
+b11 '
+b11 ,
+b11 "
+b11 *
+b11 #
+b11 +
+b11 $
+1%
+#140
+b111 )
+0%
+#150
+b1 !
+b1 -
+b0 '
+b0 ,
+b1 "
+b1 *
+b0 #
+b0 +
+b1 $
+1%
+#160
+b1000 )
+0%
+#170
+b110 !
+b110 -
+b10 '
+b10 ,
+b111 "
+b111 *
+b110 #
+b110 +
+b110 $
+1%
+#180
+b1001 )
+0%
+#190
+b10 !
+b10 -
+b1 '
+b1 ,
+b101 "
+b101 *
+b11 #
+b11 +
+b10 $
+1%
+#200
+b1010 )
+0%
