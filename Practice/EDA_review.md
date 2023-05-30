@@ -213,7 +213,58 @@ endmodule
 对于case分支和变量的x或z
 - casez：Z 或 ? 视为 don’t care
 - casex：x 或 z 或 ? 视为 don’t care
+```verilog
 
+/*
+casez输出结果：
+0ns  reg_a=000,  reg_b=000
+35ns  reg_a=001,  reg_b=001
+55ns  reg_a=011,  reg_b=010
+75ns  reg_a=111,  reg_b=101
+95ns  reg_a=110,  reg_b=101
+115ns  reg_a=xxx,  reg_b=101
+135ns  reg_a=xx1,  reg_b=101
+
+casex输出结果：
+0ns  reg_a=000,  reg_b=000
+35ns  reg_a=001,  reg_b=001
+55ns  reg_a=011,  reg_b=010
+75ns  reg_a=111,  reg_b=101
+95ns  reg_a=110,  reg_b=100
+115ns  reg_a=xxx,  reg_b=000
+135ns  reg_a=xx1,  reg_b=001
+*/
+`timescale 1ns/100ps
+module casex_casez;
+reg [2:0] reg_a, reg_b;
+
+always @ (reg_a)
+//casex (reg_a)
+casez (reg_a)
+	3'b000: reg_b <= 0;
+	3'b001: reg_b <= 1;
+	3'b01?: reg_b <= 2;
+	3'b011: reg_b <= 3;
+	3'b1x0: reg_b <= 4;
+default: reg_b <= 5;
+endcase
+
+initial begin
+	reg_a = 3'b000;
+	#35 reg_a=3'b001;
+	#20 reg_a=3'b011;
+	#20 reg_a=3'b111;
+	#20 reg_a=3'b110;  
+	#20 reg_a=3'bxxx;
+	#20 reg_a=3'bxx1;
+	#20 $stop;
+end
+
+initial begin
+	$monitor($time,"ns  reg_a=%b,  reg_b=%b\n",reg_a,reg_b);
+end
+endmodule
+```
 ### 仿真中时钟的生成
 ```verilog
 initial begin
