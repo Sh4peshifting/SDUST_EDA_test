@@ -389,7 +389,7 @@ endmodule
 ```
 ## DFF
 ```verilog
-//Asynchronous set and reset FF
+//Asynchronous set and reset FF(异步置数复位，高电平有效)
 module arsdff (clk, d, q, set, reset);
 input clk, d, set, reset;
 output q;
@@ -404,7 +404,7 @@ reg q;
     end
 endmodule
 
-//synchronous set and reset FF
+//synchronous set and reset FF(同步置数复位，高电平有效)
 module ssrdff (clk, d, q, set, reset);
 input clk, d, set, reset;
 output q;
