@@ -77,7 +77,6 @@
     $displayb ( ^~4'b111z ); // x
     $displayb ( ^~4'b111x ); // x
     ```
-***
 7. 关系操作符  
     - 返回1比特布尔值  
     - 若任何一个操作数是X或Z，则结果是***unkown***
@@ -272,6 +271,7 @@ clk <= 0; //可确保所有0时刻 @(negedge clk)能触发
 forever #10 clk <= ~clk;
 end
 ```
+***
 ## 概念
 ### FPGA开发基本流程 
 **设计思想->设计输入->功能仿真->FPGA综合->FPGA适配->门级仿真->配置器件**
@@ -420,7 +420,7 @@ reg q;
     end
 endmodule
 ```
-
+***
 ## TestBench
 三种方式的TestBench
 1. 简单测试
@@ -469,6 +469,7 @@ endmodule
         end
     endmodule
     ```
+ ***
 ## FSM 
 >有限状态机 是表示有限个状态以及在这些状态之间的转移和动作等行为的数学模型  
 分为Mealy型和Moore型两类  
