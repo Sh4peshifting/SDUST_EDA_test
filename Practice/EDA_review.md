@@ -65,7 +65,7 @@
     $displayb ( &4'b111z ); // x
     $displayb ( &4'b111x ); // x
     $displayb ( |4'b0000 ); // 0
-    $displayb ( |4‘b0x01 ); // 1
+    $displayb ( |4'b0x01 ); // 1
     $displayb ( |4'b000z ); // x
     $displayb ( |4'b000x ); // x
     $displayb ( ^4'b1111 ); // 0
